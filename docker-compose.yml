@@ -3,10 +3,10 @@ version: '3.9'
 services:
   mongodb:
     image: mongo:5.0.8
-    container_name: mongo_db
+    container_name: mongodb
     environment:
-      MONGO_INIT_ROOT_USERNAME: admin
-      MONGO_INIT_ROOT_PASSWORD: admin
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
     restart: always
 
   api:
@@ -17,3 +17,7 @@ services:
     restart: always
     depends_on:
       - mongodb
+    volumes:
+      - .:/app
+
+
