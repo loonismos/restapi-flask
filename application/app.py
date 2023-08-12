@@ -81,14 +81,10 @@ class User(Resource):
         except NotUniqueError:
             return {"message": "CPF already exists in database"}, 400
 
-
     def get(self, cpf):
         response = UserModel.objects(cpf=cpf)
 
-        if response :
+        if response:
             return jsonify(response)
 
-        return {"message": "User does not exist in database!"}, 400 
-
-
-
+        return {"message": "User does not exist in database!"}, 400
