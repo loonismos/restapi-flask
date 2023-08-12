@@ -14,12 +14,12 @@ services:
       context: .
     ports:
       - 5000:5000
-    enviroment:
+    environment:
       - FLASK_DEBUG=development
     restart: always
     depends_on:
       - mongodb
     volumes:
-      - .:/app
+      - ./application:/app/application
 
 
