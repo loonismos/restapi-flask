@@ -22,7 +22,6 @@ pluggy==1.2.0
 pycodestyle==2.10.0
 pyflakes==3.0.1
 pymongo==4.4.1
-pytest==7.4.0
 pytz==2023.3
 sentinels==1.0.0
 six==1.16.0

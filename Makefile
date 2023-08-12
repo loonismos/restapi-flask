@@ -1,4 +1,4 @@
-APP = restapi
+APP = flask-restapi
 
 test: 
 	@flake8 . --exclude .venv
@@ -10,5 +10,5 @@ compose:
 
 heroku:
 	@heroku container:login
-	@heroku container:push -a flask-restapi web
-	@heroku container:release -a flask-restapi web
+	@heroku container:push -a $(APP) web
+	@heroku container:release -a $(APP) web
