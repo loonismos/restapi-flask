@@ -45,7 +45,7 @@ class TestApplication():
     def test_get_user(self, client, valid_user, invalid_user):
         response = client.get('/user/%s' % valid_user["cpf"])
         assert response.status_code == 200
-        assert response.json[0]["first_name"] == "pode o filho"
+        assert response.json[0]["first_name"] == "pode filho"
         assert response.json[0]["last_name"] == "de uma enfermeira"
         assert response.json[0]["cpf"] == "818.806.010-01"
         assert response.json[0]["email"] == "lupedelupe@gmail.com"
