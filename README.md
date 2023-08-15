@@ -2,14 +2,14 @@
 
 The main idea of this project is to be a pratical combination of many technologies, something usual in Devops' daily life.
 
-Simply run make compose, to build and run the docker container.
+Simply run make compose, to build and run the docker container:
 ```make
   make compose
 ```
 For this project the following is proposed:
 - Build an API consists in three endpoints:
-    /users to return all users (GET)
-    /user/<cpf> to return a specific user (GET)
+    /users to return all users (GET),
+    /user/<cpf> to return a specific user (GET),
     /user to register a new user (POST)
 - Persist data in a database.
 - Config an app to run inside a docker container (Dockerfile).
